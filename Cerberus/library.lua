@@ -352,7 +352,7 @@ local function createOriginialElements()
 		page.BorderSizePixel = 0
 		page.Position = UDim2.new(1, -10, 1, -5)
 		page.Visible = false
-		page.Size = UDim2.new(.775,-25,0,0)
+		page.Size = UDim2.new(0.790000021, -24,0,0)
 
 		ScrollingFrame.Name = "ScrollingFrame"
 		ScrollingFrame.Active = true
