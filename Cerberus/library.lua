@@ -106,7 +106,7 @@ local function createOriginialElements()
 		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		screenGui.IgnoreGuiInset = true
 		
-		background.Name = "Menu"
+		background.Name = "Background"
 		background.Parent = screenGui
 		background.AnchorPoint = Vector2.new(0.5, 0.5)
 		background.BackgroundColor3 = Color3.fromRGB(24, 25, 32)
@@ -1783,7 +1783,7 @@ function Library.new(windowName: string, constrainToScreen: boolean?, width: num
 	local minimizedLongBarOriginialSize
 	local minimizedShortBarOriginialSize
 
-	local background = windowInstance.Menu
+	local background = windowInstance.Background
 	local heading = background.Heading
 	local buttonHolder = heading.ButtonHolder
 	local holder = background.Holder
