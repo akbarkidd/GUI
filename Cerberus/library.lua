@@ -2100,7 +2100,7 @@ function windowHandler:Tab(tabName: string, tabImage: string): table
 		tabInstance.TabSeperator.Size = UDim2.fromScale(.035,1)
 		tabInstance.BackgroundTransparency = .25
 		pageInstance.Visible = true
-		pageInstance.Size = UDim2.new(0.774999976, -25, 1, -15)
+		pageInstance.Size = UDim2.new(0.769999976, 0, 1, 0)
 		self.TabInfo[tabInstance].isOpen = true
 	end
 	
