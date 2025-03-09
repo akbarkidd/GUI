@@ -104,14 +104,15 @@ local function createOriginialElements()
 		local tabsUIListLayout = Instance.new("UIListLayout")
 		local pageLogo = Instance.new("ImageLabel")
 		
-		screenGui.Name = "Cerberus"
+		screenGui.Name = "akbar Hub"
 		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		screenGui.IgnoreGuiInset = true
 		
-		background.Name = "Background"
+		background.Name = "Menu"
 		background.Parent = screenGui
 		background.AnchorPoint = Vector2.new(0.5, 0.5)
 		background.BackgroundColor3 = Color3.fromRGB(24, 25, 32)
+		background.BackgroundTransparency = 0.3
 		background.BorderSizePixel = 0
 		background.ClipsDescendants = true
 		background.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -392,7 +393,7 @@ local function createOriginialElements()
 		heading.Parent = section
 		heading.BackgroundColor3 = Color3.fromRGB(40, 41, 52)
 		heading.BorderSizePixel = 0
-		heading.Size = UDim2.new(1, 0, 0, 22)
+		heading.Size = UDim2.new(1, 0, 0, 35)
 
 		headingSeperator.Name = "HeadingSeperator"
 		headingSeperator.Parent = heading
@@ -1935,7 +1936,7 @@ function Library.new(windowName: string, constrainToScreen: boolean?, width: num
 		holder.Tabs.CanvasSize = UDim2.fromOffset(0,holder.Tabs.TabsUIListLayout.AbsoluteContentSize.Y + holder.Tabs.TabsUIListLayout.Padding.Offset)
 	end)
 
-	heading.Title.Text = windowName or "Cerberus"
+	heading.Title.Text = windowName or "Akbar Hub"
 	windowInstance.Parent = game:GetService("CoreGui") -- Change to core later on and add detection bypass
 	background.Size = UDim2.fromOffset(background.AbsoluteSize.X, background.AbsoluteSize.Y)
 	
