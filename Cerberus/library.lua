@@ -1775,7 +1775,7 @@ end
 
 --Add zindex var to determine which window goes over which
 --Add var to only have one window open at a time allowed
-function Library.new(windowName: string, constrainToScreen: boolean?, width: number?, height: number?, visibilityKeybind: string?, backgroundImageId: string?): table
+function Library.new(windowName: string, constrainToScreen: boolean?, width: number?, height: number?, visibilityKeybind: string?): table
 	local window = setmetatable({}, windowHandler) -- remove elementhandler from window hanlers index?
 	local windowInstance = originalElements.Window:Clone()
 	local startDragMousePos
@@ -1783,8 +1783,7 @@ function Library.new(windowName: string, constrainToScreen: boolean?, width: num
 	local originialWindowSize
 	local minimizedLongBarOriginialSize
 	local minimizedShortBarOriginialSize
-
-	local background = windowInstance.Background
+	
 	local heading = background.Heading
 	local buttonHolder = heading.ButtonHolder
 	local holder = background.Holder
