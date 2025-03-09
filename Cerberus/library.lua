@@ -101,9 +101,7 @@ local function createOriginialElements()
 		local holder = Instance.new("Frame")
 		local backgroundUICorner = Instance.new("UICorner")
 		local tabs = Instance.new("ScrollingFrame")
-		local tabsUIListLayout = Instance.new("UIListLayout")
-		local pageLogo = Instance.new("ImageLabel")
-		
+		local tabsUIListLayout = Instance.new("UIListLayout")		
 		screenGui.Name = "AkbarHub"
 		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		screenGui.IgnoreGuiInset = true
@@ -260,19 +258,6 @@ local function createOriginialElements()
 		tabsUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		tabsUIListLayout.Padding = UDim.new(0, 5)
 		
-		pageLogo.Name = "BackGround"
-		pageLogo.AnchorPoint = Vector2.new(1, 1)
-		pageLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		pageLogo.BackgroundTransparency = 1.000
-		pageLogo.BorderSizePixel = 0
-		pageLogo.Position = UDim2.new(1, -10, 1, -5)
-		pageLogo.Size = UDim2.new(0.774999976, -25, 1, -15)
-		pageLogo.ZIndex = 0
-		pageLogo.Image = "rbxassetid://11435586663"
-		pageLogo.ImageColor3 = Color3.fromRGB(109, 110, 119)
-		pageLogo.ImageTransparency = 1
-		pageLogo.Parent = holder
-
 		return screenGui
 	end
 	
@@ -1947,7 +1932,6 @@ function Library.new(windowName: string, constrainToScreen: boolean?, width: num
 		background.Size = UDim2.fromOffset(background.AbsoluteSize.X, height)
 	end
 
-	holder.PageLogo.Image = backgroundImageId or "rbxassetid://11435586663"
 	background.Position = UDim2.new(0, background.AbsolutePosition.X + background.AbsoluteSize.X / 2, 0, background.AbsolutePosition.Y + background.AbsoluteSize.Y / 2 + 36)
 	background.BackgroundUIAspectRatioConstraint:Destroy()
 	holder.Size = UDim2.new(0,holder.AbsoluteSize.X,0,holder.AbsoluteSize.Y)
@@ -1976,9 +1960,7 @@ function windowHandler:Tab(tabName: string, tabImage: string): table
 	local tabSeperatorOpenTween = TweenService:Create(tabInstance.TabSeperator, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.fromScale(.035,1)})
 	local tabSeperatorCloseTween = TweenService:Create(tabInstance.TabSeperator, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.fromScale(0,1)})
 	local pageOpenTween = TweenService:Create(pageInstance, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.new(0.774999976, 0, 1, 0)})	
-	local pageCloseTween = TweenService:Create(pageInstance, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.new(.775,0,0,0)})
-	local logoShowTween = TweenService:Create(self.Instance.Background.Holder.PageLogo, TweenInfo.new(.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = .65})
-	local logoHideTween = TweenService:Create(self.Instance.Background.Holder.PageLogo, TweenInfo.new(.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), {ImageTransparency = 1})
+	local pageCloseTween = TweenService:Create(pageInstance, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.new(.775,0,0,0)})	
 	
 	local function isTabFirstTab()
 		local amountOfTabs = 0
@@ -2035,17 +2017,10 @@ function windowHandler:Tab(tabName: string, tabImage: string): table
 							end
 						end)
 						
-						pageOpenTween.Completed:Connect(function()
-							if pageOpenTween.PlaybackState == Enum.PlaybackState.Completed then
-								logoHideTween:Play()
-							end
-						end)
-						
 						selfInfo.isQueued = true
 						foundPageCloseTween:Play()
 						foundTabCloseTween:Play()
 						foundTabSeperatorCloseTween:Play()
-						logoShowTween:Play()
 					elseif tabInfo.isQueued then
 						tabInfo.isQueued = false
 					end
@@ -2058,7 +2033,6 @@ function windowHandler:Tab(tabName: string, tabImage: string): table
 				pageOpenTween:Play()
 				tabOpenTween:Play()
 				tabSeperatorOpenTween:Play()
-				logoHideTween:Play()
 			end
 		end
 		
@@ -2067,7 +2041,6 @@ function windowHandler:Tab(tabName: string, tabImage: string): table
 			tabCloseTween:Play()
 			tabSeperatorCloseTween:Play()
 			pageCloseTween:Play()
-			logoShowTween:Play()
 		end
 		
 		if selfInfo.isOpen then
