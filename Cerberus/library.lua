@@ -104,15 +104,14 @@ local function createOriginialElements()
 		local tabsUIListLayout = Instance.new("UIListLayout")
 		local pageLogo = Instance.new("ImageLabel")
 		
-		screenGui.Name = "akbarHub"
+		screenGui.Name = "Cerberus"
 		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		screenGui.IgnoreGuiInset = true
 		
-		background.Name = "Menu"
+		background.Name = "Background"
 		background.Parent = screenGui
 		background.AnchorPoint = Vector2.new(0.5, 0.5)
 		background.BackgroundColor3 = Color3.fromRGB(24, 25, 32)
-		
 		background.BorderSizePixel = 0
 		background.ClipsDescendants = true
 		background.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -393,7 +392,7 @@ local function createOriginialElements()
 		heading.Parent = section
 		heading.BackgroundColor3 = Color3.fromRGB(40, 41, 52)
 		heading.BorderSizePixel = 0
-		heading.Size = UDim2.new(1, 0, 0, 35)
+		heading.Size = UDim2.new(1, 0, 0, 22)
 
 		headingSeperator.Name = "HeadingSeperator"
 		headingSeperator.Parent = heading
@@ -1936,7 +1935,7 @@ function Library.new(windowName: string, constrainToScreen: boolean?, width: num
 		holder.Tabs.CanvasSize = UDim2.fromOffset(0,holder.Tabs.TabsUIListLayout.AbsoluteContentSize.Y + holder.Tabs.TabsUIListLayout.Padding.Offset)
 	end)
 
-	heading.Title.Text = windowName or "Akbar Hub"
+	heading.Title.Text = windowName or "Cerberus"
 	windowInstance.Parent = game:GetService("CoreGui") -- Change to core later on and add detection bypass
 	background.Size = UDim2.fromOffset(background.AbsoluteSize.X, background.AbsoluteSize.Y)
 	
@@ -2101,7 +2100,7 @@ function windowHandler:Tab(tabName: string, tabImage: string): table
 		tabInstance.TabSeperator.Size = UDim2.fromScale(.035,1)
 		tabInstance.BackgroundTransparency = .25
 		pageInstance.Visible = true
-		pageInstance.Size = UDim2.new(0.769999976, 0, 1, 0)
+		pageInstance.Size = UDim2.new(0.774999976, -25, 1, -15)
 		self.TabInfo[tabInstance].isOpen = true
 	end
 	
@@ -2174,7 +2173,6 @@ function tabHandler:Section(sectionTitle: string) -- Add option to make on left 
 	section.GuiToRemove = sectionInstance
 	section.ElementToParentChildren = sectionInstance.ElementHolder
 	
-	sectionInstance.Heading.MouseButton1Click:Connect(onResizeClick)
 	sectionInstance.Heading.ResizeButton.MouseButton1Click:Connect(onResizeClick)
 	
 	sectionInstance.ElementHolder.ElementHolderList:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
