@@ -404,7 +404,7 @@ local function createOriginialElements()
 		section.Name = "Section"
 		section.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
 		section.BorderSizePixel = 0
-		section.Size = UDim2.new(1, 0, 0, 200)
+		section.Size = UDim2.new(1, 0, 0, 0)
 		section.ClipsDescendants = true
 
 		heading.Name = "Heading"
