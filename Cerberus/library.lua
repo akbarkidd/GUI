@@ -251,8 +251,8 @@ local function createOriginialElements()
 		tabs.AnchorPoint = Vector2.new(0, 1)
 		tabs.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
 		tabs.BorderSizePixel = 0
-		tabs.Position = UDim2.new(0, 5, 1, -5)
-		tabs.Size = UDim2.new(0.225, 0, 1, -15)
+		tabs.Position = UDim2.new(0, 0, 1, 0)
+		tabs.Size = UDim2.new(0.225, 0, 1, 0)
 		tabs.ScrollBarThickness = 0
 
 		tabsUIListLayout.Name = "TabsUIListLayout"
@@ -358,7 +358,7 @@ local function createOriginialElements()
 		ScrollingFrame.Active = true
 		ScrollingFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
 		ScrollingFrame.BackgroundTransparency = 1.000
-		ScrollingFrame.Size = UDim2.new(0.5, -5, 1, 0)
+		ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
 		ScrollingFrame.ScrollBarThickness = 0
 		ScrollingFrame.CanvasSize = UDim2.fromScale(0,0)
 		ScrollingFrame.Parent = page
