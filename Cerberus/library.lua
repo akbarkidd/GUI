@@ -1783,8 +1783,6 @@ function Library.new(windowName: string, constrainToScreen: boolean?, width: num
 	local originialWindowSize
 	local minimizedLongBarOriginialSize
 	local minimizedShortBarOriginialSize
-	
-	local heading = background.Heading
 	local buttonHolder = heading.ButtonHolder
 	local holder = background.Holder
 
