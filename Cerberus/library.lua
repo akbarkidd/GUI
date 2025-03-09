@@ -104,11 +104,11 @@ local function createOriginialElements()
 		local tabsUIListLayout = Instance.new("UIListLayout")
 		local pageLogo = Instance.new("ImageLabel")
 		
-		screenGui.Name = "AkbarHub"
+		screenGui.Name = "Cerberus"
 		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		screenGui.IgnoreGuiInset = true
 		
-		background.Name = "Menu"
+		background.Name = "Background"
 		background.Parent = screenGui
 		background.AnchorPoint = Vector2.new(0.5, 0.5)
 		background.BackgroundColor3 = Color3.fromRGB(24, 25, 32)
@@ -260,13 +260,13 @@ local function createOriginialElements()
 		tabsUIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		tabsUIListLayout.Padding = UDim.new(0, 5)
 		
-		pageLogo.Name = "BackGround"
+		pageLogo.Name = "PageLogo"
 		pageLogo.AnchorPoint = Vector2.new(1, 1)
 		pageLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		pageLogo.BackgroundTransparency = 1.000
 		pageLogo.BorderSizePixel = 0
 		pageLogo.Position = UDim2.new(1, -10, 1, -5)
-		pageLogo.Size = UDim2.new(0, 0, 0, 0)
+		pageLogo.Size = UDim2.new(0.774999976, -25, 1, -15)
 		pageLogo.ZIndex = 0
 		pageLogo.Image = "rbxassetid://11435586663"
 		pageLogo.ImageColor3 = Color3.fromRGB(109, 110, 119)
