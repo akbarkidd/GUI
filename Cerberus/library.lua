@@ -350,9 +350,9 @@ local function createOriginialElements()
 		page.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
 		page.BackgroundTransparency = 1.000
 		page.BorderSizePixel = 0
-		page.Position = UDim2.new(1, -10, 1, -5)
+		page.Position = UDim2.new(1, 0, 1, 0)
 		page.Visible = false
-		page.Size = UDim2.new(0.790000021, -24,0,0)
+		page.Size = UDim2.new(0.790000021, 0,1,0)
 
 		ScrollingFrame.Name = "ScrollingFrame"
 		ScrollingFrame.Active = true
