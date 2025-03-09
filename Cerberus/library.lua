@@ -342,10 +342,8 @@ local function createOriginialElements()
 	
 	local function createPage()
 		local page = Instance.new("Frame")
-		local leftScrollingFrame = Instance.new("ScrollingFrame")
-		local leftScrollingFrameList = Instance.new("UIListLayout")
-		local rightScrollingFrame = Instance.new("ScrollingFrame")
-		local rightScrollingFrameList = Instance.new("UIListLayout")
+		local ScrollingFrame = Instance.new("ScrollingFrame")
+		local ScrollingFrameList = Instance.new("UIListLayout")
 
 		page.Name = "Page"
 		page.AnchorPoint = Vector2.new(1, 1)
@@ -356,36 +354,19 @@ local function createOriginialElements()
 		page.Visible = false
 		page.Size = UDim2.new(.775,-25,0,0)
 
-		leftScrollingFrame.Name = "LeftScrollingFrame"
-		leftScrollingFrame.Active = true
-		leftScrollingFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
-		leftScrollingFrame.BackgroundTransparency = 1.000
-		leftScrollingFrame.Size = UDim2.new(0.5, -5, 1, 0)
-		leftScrollingFrame.ScrollBarThickness = 0
-		leftScrollingFrame.CanvasSize = UDim2.fromScale(0,0)
-		leftScrollingFrame.Parent = page
+		ScrollingFrame.Name = "ScrollingFrame"
+		ScrollingFrame.Active = true
+		ScrollingFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
+		ScrollingFrame.BackgroundTransparency = 1.000
+		ScrollingFrame.Size = UDim2.new(0.5, -5, 1, 0)
+		ScrollingFrame.ScrollBarThickness = 0
+		ScrollingFrame.CanvasSize = UDim2.fromScale(0,0)
+		ScrollingFrame.Parent = page
 		
-		leftScrollingFrameList.Name = "LeftScrollingFrameList"
-		leftScrollingFrameList.Padding = UDim.new(0,7)
-		leftScrollingFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-		leftScrollingFrameList.Parent = leftScrollingFrame
-		
-		rightScrollingFrame.Name = "RightScrollingFrame"
-		rightScrollingFrame.Active = true
-		rightScrollingFrame.AnchorPoint = Vector2.new(1, 0)
-		rightScrollingFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
-		rightScrollingFrame.BackgroundTransparency = 1.000
-		rightScrollingFrame.Position = UDim2.new(1, 0, 0, 0)
-		rightScrollingFrame.Size = UDim2.new(0.5, -5, 1, 0)
-		rightScrollingFrame.CanvasSize = UDim2.fromScale(0,0)
-		rightScrollingFrame.ScrollBarThickness = 0
-		rightScrollingFrame.Parent = page
-		
-		rightScrollingFrameList.Name = "RightScrollingFrameList"
-		rightScrollingFrameList.Padding = UDim.new(0,7)
-		rightScrollingFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-		rightScrollingFrameList.Parent = rightScrollingFrame
-		
+		ScrollingFrameList.Name = "ScrollingFrameList"
+		ScrollingFrameList.Padding = UDim.new(0,7)
+		ScrollingFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		ScrollingFrameList.Parent = ScrollingFrame
 		return page
 	end
 	
