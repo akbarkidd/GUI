@@ -112,7 +112,7 @@ local function createOriginialElements()
 		background.Parent = screenGui
 		background.AnchorPoint = Vector2.new(0.5, 0.5)
 		background.BackgroundColor3 = Color3.fromRGB(24, 25, 32)
-		background.BackgroundTransparency = 0.3
+		
 		background.BorderSizePixel = 0
 		background.ClipsDescendants = true
 		background.Position = UDim2.new(0.5, 0, 0.5, 0)
