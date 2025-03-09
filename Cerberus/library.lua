@@ -1,12 +1,6 @@
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
-for _, connection in pairs(getconnections(player.Idled)) do
-	if connection.Enabled then
-    	connection:Disable()
-    end
-end
-
 local TweenService = game:GetService("TweenService")
 local TextService = game:GetService("TextService")
 local UserInputService = game:GetService("UserInputService")
