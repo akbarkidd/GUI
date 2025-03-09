@@ -104,7 +104,7 @@ local function createOriginialElements()
 		local tabsUIListLayout = Instance.new("UIListLayout")
 		local pageLogo = Instance.new("ImageLabel")
 		
-		screenGui.Name = "akbar Hub"
+		screenGui.Name = "akbarHub"
 		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		screenGui.IgnoreGuiInset = true
 		
