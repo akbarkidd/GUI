@@ -2691,7 +2691,7 @@ local aa = {
                 )
             local p, s =
                 e(
-                    "TextBox",
+                    "TextButton",
                     {
                         Size = UDim2.fromOffset(160, 30),
                         Position = UDim2.new(1, -10, 0.5, 0),
