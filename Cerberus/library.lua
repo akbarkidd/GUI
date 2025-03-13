@@ -378,7 +378,7 @@ local function createOriginialElements()
 		heading.Parent = section
 		heading.BackgroundColor3 = Color3.fromRGB(40, 41, 52)
 		heading.BorderSizePixel = 0
-		heading.Size = UDim2.new(1, 0, 0, 22)
+		heading.Size = UDim2.new(1, 0, 0, 30)
 
 		headingSeperator.Name = "HeadingSeperator"
 		headingSeperator.Parent = heading
@@ -421,7 +421,7 @@ local function createOriginialElements()
 		elementHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		elementHolder.BackgroundTransparency = 1.000
 		elementHolder.BorderSizePixel = 0
-		elementHolder.Position = UDim2.new(0, 0, 0, 22)
+		elementHolder.Position = UDim2.new(0, 0, 0, 30)
 		elementHolder.Size = UDim2.new(1, 0, 0, 178)
 		elementHolder.ClipsDescendants = true
 
@@ -1472,7 +1472,7 @@ local function createOriginialElements()
 		wheelHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		wheelHolder.BackgroundTransparency = 1.000
 		wheelHolder.BorderSizePixel = 0
-		wheelHolder.Position = UDim2.new(0, 0, 0, 22)
+		wheelHolder.Position = UDim2.new(0, 0, 0, 30)
 		wheelHolder.Size = UDim2.new(1, 0, 0, 98)
 
 		valueHolder.Name = "ValueHolder"
