@@ -336,7 +336,7 @@ local function createOriginialElements()
 		page.BackgroundColor3 = Color3.fromRGB(31, 31, 43)
 		page.BackgroundTransparency = 1.000
 		page.BorderSizePixel = 0
-		page.Position = UDim2.new(1, 0, 1, 0)
+		page.Position = UDim2.new(0.993, 0, 1, 0)
 		page.Visible = false
 		page.Size = UDim2.new(0.790000021, 0,1,0)
 
@@ -1999,7 +1999,7 @@ function windowHandler:Tab(tabName: string, tabImage: string): table
 			for foundTabInstance, tabInfo in pairs(self.TabInfo) do
 				if foundTabInstance ~= tabInstance then
 					if tabInfo.isOpen then
-						local foundPageCloseTween = TweenService:Create(tabInfo.Page, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.new(.775,-25,0,0)})
+						local foundPageCloseTween = TweenService:Create(tabInfo.Page, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.new(.800999939, -25,1,0)})
 						local foundTabCloseTween = TweenService:Create(foundTabInstance, TweenInfo.new(.25, Enum.EasingStyle.Linear), {BackgroundTransparency = 1})
 						local foundTabSeperatorCloseTween = TweenService:Create(foundTabInstance.TabSeperator, TweenInfo.new(.25, Enum.EasingStyle.Linear), {Size = UDim2.fromScale(0,1)})
 
