@@ -2147,7 +2147,7 @@ function tabHandler:Section(sectionTitle: string) -- Add option to make on left 
 	section.GuiToRemove = sectionInstance
 	section.ElementToParentChildren = sectionInstance.ElementHolder
 	
-	sectionInstance.Heading.ResizeButton.MouseButton1Click:Connect(onResizeClick)
+	sectionInstance.Heading.MouseButton1Click:Connect(onResizeClick)
 	
 	sectionInstance.ElementHolder.ElementHolderList:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
 		sectionInstance.Size = UDim2.new(1, 0, 0, getSectionNeededYOffsetSize())
