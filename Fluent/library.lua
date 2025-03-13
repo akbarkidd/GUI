@@ -3557,6 +3557,7 @@ local aa = {
         local aa, ab, ac, ad, ae = b(28)
         return {
             assets = {
+                ["lucide-fishing"] = "🎣",
                 ["lucide-accessibility"] = "rbxassetid://10709751939",
                 ["lucide-activity"] = "rbxassetid://10709752035",
                 ["lucide-air-vent"] = "rbxassetid://10709752131",
